@@ -14,11 +14,10 @@ defmodule JokenTest do
     assert claims["exp"] == from_now_as_unix(2)
     assert claims["iat"] == DateTime.utc_now() |> DateTime.to_unix()
     assert claims["nbf"] == assert(claims["iat"])
-    assert claims["jti"] == "my_jti"
 
     assert claims["user_id"] == "some_id"
 
-    # the `claim["jti"]` is something generated via generate_jti, whose output changes randomly.
+    # The `claim["jti"]` is something generated via generate_jti, whose output changes randomly.
     # I tried to modify the default using Joken.Config.default_claims(jti: fn -> "my_jti" end)
     # but didn't work. What worked (but I didn't like) was to just add it to the claims so as to
     # overwrite it:

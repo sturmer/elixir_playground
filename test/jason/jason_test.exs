@@ -1,4 +1,5 @@
 defmodule JasonTest do
+  # NOTE(gianluca): Jason is a dependency of Joken.
   use ExUnit.Case
 
   test "can decode JSON" do

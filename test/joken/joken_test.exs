@@ -11,8 +11,11 @@ defmodule JokenTest do
 
     assert claims["aud"] == "Joken"
     assert claims["iss"] == "Joken"
-    assert claims["exp"] == from_now_as_unix(2)
-    assert claims["iat"] == DateTime.utc_now() |> DateTime.to_unix()
+
+    # Using <= because it might take a fraction of second to compute `now`.
+    assert claims["exp"] <= from_now_as_unix(2)
+    assert claims["iat"] <= DateTime.utc_now() |> DateTime.to_unix()
+
     assert claims["nbf"] == assert(claims["iat"])
 
     assert claims["user_id"] == "some_id"

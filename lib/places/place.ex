@@ -1,4 +1,4 @@
-defmodule Playground.Place do
+defmodule ElixirPlayground.Place do
   use Ecto.Schema
   import Ecto.Changeset
 

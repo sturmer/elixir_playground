@@ -1,4 +1,4 @@
-defmodule Playground.Repo.Migrations.AddPlaces do
+defmodule ElixirPlayground.Repo.Migrations.AddPlaces do
   use Ecto.Migration
 
   # Generated using `mix ecto.gen.migration AddPlaces`.

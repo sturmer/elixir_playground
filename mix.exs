@@ -22,7 +22,9 @@ defmodule ElixirPlayground.MixProject do
   defp deps do
     [
       {:joken, "~> 2.0"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:ecto_sql, "~> 3.0"},
+      {:postgrex, ">= 0.0.0"}
     ]
   end
 end

@@ -32,7 +32,8 @@ defmodule ElixirPlayground.MixProject do
       {:jason, "~> 1.1"},
       {:ecto, "~> 3.7"},
       {:ecto_sql, "~> 3.7"},
-      {:postgrex, "~> 0.16.1"}
+      {:postgrex, "~> 0.16.1"},
+      {:dataloader, "~> 1.0"}
     ]
   end
 

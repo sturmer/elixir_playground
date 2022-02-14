@@ -1,4 +1,4 @@
-defmodule ElixirPlayground.SQLTest do
+defmodule ElixirPlayground.WidthBucketTest do
   use ElixirPlayground.RepoCase
 
   test "width_bucket" do
@@ -18,6 +18,7 @@ defmodule ElixirPlayground.SQLTest do
     #    rows: [[3]]
     #  }}
     res = Map.get(result, :rows) |> List.first() |> List.first()
+    assert res == 3
 
     {:ok, result} =
       Ecto.Adapters.SQL.query(
